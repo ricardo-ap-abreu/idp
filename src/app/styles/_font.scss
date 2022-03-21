@@ -1,0 +1,25 @@
+@import './variables';
+    
+    @each $sizeValue, $size in $sizes {
+        .font-size-#{$sizeValue} {
+           font-size: $size;
+        }
+    }
+
+    @each $colorName, $color in $colors {
+        .font-color-#{"" + $colorName} {
+           color: $color;
+        }
+    }
+   
+    @each $styleValue , $style in $font-styles {
+        .font-style-#{$styleValue} {
+           font-style: $style;
+        }
+    }
+    @each $weightvalue, $weight in $weights {
+        .font-weight-#{$weightvalue} {
+           font-weight: $weight;
+        }
+    }
+  

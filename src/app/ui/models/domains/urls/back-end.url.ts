@@ -1,0 +1,12 @@
+import { Url } from './url';
+import { environment } from "../../../../../environments/environment";
+
+export class BackendUrl extends Url {
+    constructor (private action: string) {
+        super(action);
+    }
+
+    getUrl() : string {
+        return environment.backendUrl + this.action;
+    }
+}

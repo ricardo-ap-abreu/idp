@@ -1,0 +1,22 @@
+
+.container {
+
+  padding: 0 10px;
+
+  .alert-container, .message-container{
+    padding: 20px 10px 0 10px;
+  }
+
+  .input-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  } 
+
+}
+
+ion-footer {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

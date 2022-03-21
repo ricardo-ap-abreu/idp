@@ -1,0 +1,66 @@
+.alert {
+  border-radius: .25rem;
+  padding: 10px;
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.alert-danger {
+  color: var(--ion-color-danger-alert-font);
+  background-color: var(--ion-color-danger-alert-background);
+  border: 2px solid var(--ion-color-danger-alert-border);
+}
+
+.alert-info {
+  color: var(--ion-color-info-alert-font);
+  background-color: var(--ion-color-info-alert-background);
+  border: 2px solid var(--ion-color-info-alert-border);
+}
+
+.alert-success {
+  color: var(--ion-color-success-alert-font);
+  background-color: var(--ion-color-success-alert-background);
+  border: 2px solid var(--ion-color-success-alert-border);
+}
+
+.alert-warning {
+  color: var(--ion-color-warning-alert-font);
+  background-color: var(--ion-color-warning-alert-background);
+  border: 2px solid var(--ion-color-warning-alert-border);
+}
+
+.message-container {
+
+  span {
+    display: block;
+    width: calc(100% - 20px);
+  }
+
+  ion-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: inherit;
+    margin: 0;
+    --padding-end: 5px;
+
+    ion-icon {
+      font-size: 25px;
+    }
+
+  }
+
+}
+
+ion-text {
+  color: inherit;
+  margin: auto;
+  display: flex;
+  width: fit-content;
+  font-weight: bold;
+  padding: 20px 5px 5px 5px;
+}
+
+ion-text:active {
+  opacity: .5;
+}

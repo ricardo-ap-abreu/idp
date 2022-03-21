@@ -1,0 +1,13 @@
+<div class="input-content {{getClassForm()}}" [formGroup]="group">
+  <ion-item lines="none">
+    <ng-content></ng-content>
+  </ion-item>
+  <ng-container *ngIf="formMessage">
+    <ng-container *ngFor="let validation of formMessage.content">
+      <div class="message" *ngIf="abstractControl.hasError(validation.type) && (abstractControl.touched || abstractControl.value)" >
+        <ion-icon name="alert"></ion-icon>
+        <span [innerHtml]="validation.message"></span>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>

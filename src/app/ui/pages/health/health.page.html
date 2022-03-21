@@ -1,0 +1,21 @@
+<custom-header headerTitle="Health" headerSubTitle="Service Status" hasBack="true"></custom-header>
+<ion-content>
+  <div *ngIf="alertMessage" class="alert-message">
+    <custom-alert-message  [alert]="alertMessage"></custom-alert-message>
+  </div>
+  <ng-container *ngIf="!alertMessage">
+    <ion-card *ngFor="let item of healthItems" mode="md">
+      <ion-row>
+        <ion-col size="10">
+          <span [class]="getStatusIconClass(item.getStatus())"></span>
+          <span>{{ item.getName() }}</span>
+        </ion-col>
+        <ion-col size="2">
+          <ion-button (click)="openAlert(item.getError() || item.getDescription())" fill="clear">
+            <ion-icon slot="icon-only" name="information-circle-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ng-container>
+</ion-content>

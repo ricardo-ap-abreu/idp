@@ -1,0 +1,14 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+@import '../../../../styles/font';
+
+ion-icon {
+  margin: 10px 2px 2px 2px;
+}
+
+.icon-right:active {
+  opacity: 0.5;
+}
+
+
+

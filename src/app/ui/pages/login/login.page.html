@@ -1,0 +1,40 @@
+
+<ion-content>
+  <div class="container">
+    <ion-card mode="md">
+      <ion-card-content>
+        <ion-row class="card-header">
+          <img [src]="'/assets/images/login-mon.svg'" alt="login-img"/>
+          <div>
+            <span class="login-title"><strong>IDP</strong>-MON</span>
+            <p class="login-subtitle">v{{version}}</p>
+          </div>
+        </ion-row>
+        <ion-row *ngIf="alertMessage">
+          <custom-alert-message [alert]="alertMessage"></custom-alert-message>
+        </ion-row>
+        <form [formGroup]="formGroup" (ngSubmit)="submitForm(formGroup.value)">
+          <ion-row>
+            <custom-input-text [formGroup]="formGroup" [formGroupMessages]="formGroupMessage"
+                name="user" placeholder="Usuário" iconStart="person"></custom-input-text>
+          </ion-row>
+          <ion-row>
+            <custom-input-text [formGroup]="formGroup" [formGroupMessages]="formGroupMessage" type="password"
+              name="password" placeholder="Senha" iconStart="lock"></custom-input-text>
+          </ion-row>          
+          <ion-row>
+            <custom-input-checkbox [formGroup]="formGroup" [formGroupMessages]="formGroupMessage" [alwaysValid]="false"
+              name="remember" placeholder="Lembrar esta conta" iconStart="lock"></custom-input-checkbox>
+          </ion-row>
+          <ion-row class="forgot-password">
+            <ion-button fill="clear" type="button" (click)="openForgotPasswordDialog()">Esqueceu a senha?</ion-button>
+          </ion-row>
+          <ion-row class="submit">
+            <ion-button expand="block" type="submit" [disabled]="!formGroup.valid">Login</ion-button>
+          </ion-row>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+

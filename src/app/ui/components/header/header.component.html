@@ -1,0 +1,26 @@
+<ion-header mode="ios">
+  <ion-toolbar color="primary" mode="ios">
+    <ng-container *ngIf="hasBack">
+      <ion-buttons slot="secondary">
+        <ion-button (click)="back()">
+          <ion-icon slot="icon-only" name="arrow-back" mode="ios"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ng-container>
+    <ng-container *ngIf="hasVersionLogo" >
+      <ion-buttons class="version-container" slot="secondary">
+        <span>{{getAppName()}}</span>
+        <span>{{getVersion()}}</span>
+      </ion-buttons>
+    </ng-container>
+    <ion-title>
+      {{ headerTitle }}
+      <div class="sub-title" *ngIf="headerSubTitle">{{ headerSubTitle }}</div>
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="headerRightOnPress()">
+        <ion-icon slot="icon-only" [name]="headerRightIcon"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

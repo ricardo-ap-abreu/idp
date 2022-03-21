@@ -1,0 +1,11 @@
+﻿<div [class]="getClass()" *ngIf="alert">
+  <div class="message-container">
+    <span> {{ alert.message }} </span>
+    <ion-button (click)="closeAlert()" *ngIf="alert.closeOption" fill="clear">
+      <ion-icon slot="icon-only" name="close"></ion-icon>
+    </ion-button>
+  </div>
+  <ion-text *ngIf="alert.onTryAgain != null" (click)="alert.onTryAgain()">
+    Tentar Novamente
+  </ion-text>
+</div>

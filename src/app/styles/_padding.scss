@@ -1,0 +1,20 @@
+@import './variables';
+
+@each $pxvalue, $px in $pxs {
+    .padding-#{$pxvalue} {
+        padding: $px + px;  
+    }
+    .padding-left-#{$pxvalue} {
+        padding-left: $px + px;
+    }
+    .padding-right-#{$pxvalue} {
+        padding-right: $px + px;
+    }
+    .padding-top-#{$pxvalue} {
+        padding-top: $px + px;
+    }
+    .padding-bottom-#{$pxvalue} {
+        padding-bottom: $px + px;
+    }
+    
+}

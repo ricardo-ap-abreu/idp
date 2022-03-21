@@ -1,0 +1,13 @@
+<ion-list>
+  <ng-content></ng-content>
+</ion-list>
+<ion-infinite-scroll threshold="100px" (ionInfinite)="callBottomReach($event)">
+  <ion-infinite-scroll-content  loadingSpinner="bubbles" loadingText="Carregando..."></ion-infinite-scroll-content>
+</ion-infinite-scroll>
+<ng-container *ngIf="hasFab">
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" *ngIf="!isTop" [style.bottom]="bottomPosition">
+    <ion-fab-button (click)="scrollTop()">
+      <ion-icon name="arrow-up" mode="ios"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ng-container>

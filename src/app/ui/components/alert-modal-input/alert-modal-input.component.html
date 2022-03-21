@@ -1,0 +1,20 @@
+<custom-header [headerTitle]="data.title" [hasVersionLogo]="false" headerRightIcon="close" [headerRightOnPress]="closeModal.bind(this)"></custom-header>
+<ion-content>
+  <div class="container" [formGroup]="data.formGroup">
+    <div class="alert-container" *ngIf="getAlert()">
+      <custom-alert-message [alert]="getAlert()"></custom-alert-message>
+    </div>
+    <div class="message-container" *ngIf="data.text">
+      <span [innerHtml]="data.text"></span>
+    </div>
+    <div class="inputs-container" [formGroup]="data.formGroup">
+      <div *ngFor="let input of data.inputs" class="input-container">
+        <custom-input-text [formGroup]="data.formGroup" [placeholder]="input.placeholder" [type]="input.type" [formGroupMessages]="data.formGroupMessage" [name]="input.name"></custom-input-text>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-button color="danger" mode="md" (click)="closeModal()">Cancelar</ion-button>
+  <ion-button mode="md" [disabled]="!data.formGroup.valid" (click)="data.confirmPress(data.formGroup.value)">Confirmar</ion-button>
+</ion-footer>

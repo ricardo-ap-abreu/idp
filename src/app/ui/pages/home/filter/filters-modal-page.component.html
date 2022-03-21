@@ -1,0 +1,47 @@
+<custom-header headerTitle="Filtros" headerRightIcon="close" [headerRightOnPress]="closeModal.bind(this)"></custom-header>
+ <ion-content>
+    <form [formGroup]="formGroup"  (ngSubmit)="submitForm(formGroup.value)">
+      <div class="form-container" *ngFor="let filter of filters">
+        <custom-input-select
+          *ngIf="filter.isComboBoxFilter()"
+          [items]="filter.getDefaultValues()"
+          [formGroup]="formGroup"
+          [placeholder]="filter.getName()"
+          [selected]="filter.getValue()"
+          [name]="filter.getPropertyName()">
+        </custom-input-select>
+        <custom-input-checkbox
+          *ngIf="filter.isCheckFilter()"
+          [formGroup]="formGroup"
+          [filter]="filter"
+          [placeholder]="filter.getName()"
+          [alwaysValid]="true"
+          [name]="filter.getPropertyName()">
+        </custom-input-checkbox>
+        <custom-input-date
+          *ngIf="filter.isDateFilter()"
+          [formGroup]="formGroup"
+          [placeholder]="filter.getName()"
+          displayFormat="DD/MM/YYYY HH:mm"
+          outputFormat="YYYY/MM/DD HH:mm"
+          [name]="filter.getPropertyName()">
+        </custom-input-date>
+        <custom-input-text
+          *ngIf="filter.isTextFilter()"
+          [formGroup]="formGroup"
+          [placeholder]="filter.getName()"
+          [name]="filter.getPropertyName()">
+        </custom-input-text>
+        <custom-input-text
+          *ngIf="filter.isNumberFilter()"
+          [formGroup]="formGroup"
+          [placeholder]="filter.getName()"
+          type="number"
+          [name]="filter.getPropertyName()">
+        </custom-input-text>
+      </div>
+    </form>
+  </ion-content>
+  <ion-footer>
+    <ion-button expand="full" [disabled]="!formGroup.valid"  (click)="submitForm(formGroup.value)">Filtrar</ion-button>
+  </ion-footer>

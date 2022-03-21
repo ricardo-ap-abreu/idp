@@ -1,0 +1,42 @@
+
+ion-content {
+  --background: var(--ion-color-light-shade);
+
+  ion-list {
+
+    margin-top: 20px;
+    padding-bottom: 0;
+
+    ion-item {
+
+      ion-text {
+        display: block;
+      }
+
+      ion-text:first-child {
+        font-weight: bold;
+        color: var(--ion-color-medium);
+        margin-bottom: 10px;
+      }
+
+      .title-content {
+        display: flex;
+
+        span {
+          padding-top: 7px;
+          width: 100%;
+        }
+
+        ion-icon {
+          font-size: 22px;
+          vertical-align: middle;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,8 @@
+<div [formGroup]="formGroup">
+  <custom-input-container [group]="formGroup" [messages]="formGroupMessages" [name]="name" [alwaysValid]="alwaysValid">
+    <ion-label>
+      {{ placeholder }}
+    </ion-label>
+    <ion-checkbox [formControlName]="name" color="primary" mode="ios" (ionChange)="changeCheckbox()"></ion-checkbox>
+  </custom-input-container>
+</div>

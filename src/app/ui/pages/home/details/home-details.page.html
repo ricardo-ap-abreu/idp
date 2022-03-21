@@ -1,0 +1,17 @@
+<custom-header headerTitle="Detalhes" [headerSubTitle]="subHeader" [hasBack]="true"></custom-header>
+<ion-content>
+  <ion-list *ngIf="items">
+    <ng-container *ngFor="let item of items">
+      <ion-item *ngIf="item.message !== undefined" lines="full">
+        <ion-label class="ion-text-wrap">
+          <ion-text>
+            {{ item.label }}
+          </ion-text>
+          <ion-text>
+            {{ item.message }}
+          </ion-text>
+        </ion-label>
+      </ion-item>
+    </ng-container>
+  </ion-list>
+</ion-content>

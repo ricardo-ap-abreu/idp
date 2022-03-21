@@ -1,0 +1,91 @@
+@import './variables';
+@import './background';
+@import './font';
+
+//@include mat-core();
+
+.primary {
+    @extend .background-color-primary;
+    @extend .font-color-white;
+}
+
+.secondary {
+  @extend .background-color-secondary;
+  @extend .font-color-white;
+}
+
+$primary-theme: (
+  700 : $primary,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$accent-theme: (
+  500 : $accent-theme,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$warn-theme: (
+    500 : $warn-theme,
+    contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+  );
+
+/*
+$theme: mat-light-theme(mat-palette($primary-theme, 700), mat-palette($accent-theme, 500),  mat-palette($warn-theme, 500));
+@include angular-material-theme($theme);
+
+@function mat-light-theme($primary, $accent, $warn) {
+    @return (
+      primary: $primary,
+      accent: $accent,
+      warn: $warn,
+      is-dark: false,
+      foreground: $mat-light-theme-foreground,
+      background: $mat-light-theme-background,
+    );
+}
+*/

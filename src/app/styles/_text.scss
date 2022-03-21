@@ -1,0 +1,17 @@
+@import './variables';
+
+@each $text-alignment-value , $text-align in $text-alignment {
+    .text-align-#{$text-alignment-value} {
+        text-align: $text-align;
+    }
+}
+@each $decorationValue , $decoration in $decorations {
+    .text-decoration-#{$decorationValue} {
+       text-decoration: $decoration;
+    }
+}
+@each $transformValue , $transform in $text-transform {
+    .text-transform-#{$transformValue} {
+       text-transform: $transform;
+    }
+}

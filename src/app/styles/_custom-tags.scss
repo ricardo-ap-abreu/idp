@@ -1,0 +1,21 @@
+@import './variables';
+
+h1 {
+    font-size: $large;
+}
+
+h2 {
+    font-size: $medium;
+}
+
+h3 {
+    font-size: $default;
+}
+
+h4 {
+    font-size: $small;
+}
+
+h5 {
+    font-size: $x-small;
+}

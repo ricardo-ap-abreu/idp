@@ -1,0 +1,7 @@
+<div [formGroup]="formGroup">
+  <custom-input-container [group]="formGroup" [messages]="formGroupMessages" [name]="name" [hasFocus]="hasFocus" [alwaysValid]="alwaysValid">
+    <ion-icon class="icon-left" *ngIf="iconStart" [name]="iconStart" mode="md" slot="start" size="large"></ion-icon>
+    <ion-input [formControlName]="name" [type]="type" (ionFocus)="changeFocus(true)" (ionBlur)="changeFocus(false)" [placeholder]="placeholder"></ion-input>
+    <ion-icon class="icon-right" *ngIf="iconEnd" [name]="iconEnd" mode="md" slot="end" size="large"></ion-icon>
+  </custom-input-container>
+</div>

@@ -1,0 +1,22 @@
+
+ion-label {
+  font-weight: bold;
+  max-width: fit-content;
+  flex: none;
+  margin-right: 0;
+}
+
+ion-select {
+  text-align: right;
+  flex-grow: 1;
+  max-width: 100%;
+  --padding-start: 10px;
+  --padding-bottom: 10px;
+
+  .select-icon {
+    margin-right: 5px;
+  }
+
+}
+
+

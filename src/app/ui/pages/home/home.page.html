@@ -1,0 +1,17 @@
+<custom-header headerTitle="Home" headerRightIcon="switch" hasVersionLogo="true" [headerRightOnPress]="showFilterModal.bind(this)"></custom-header>
+<ion-content [scrollEvents]="true">
+  <custom-infinite-list [content]="content" [hasFab]="true" [bottomReach]="addItems.bind(this)">
+    <ion-card *ngFor="let item of items" mode="md">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="11">
+            {{ item.value }}
+          </ion-col>
+          <ion-col size="1">
+            <ion-icon (click)="goDetails(item)" size="large" name="information-circle-outline"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </custom-infinite-list>
+</ion-content>

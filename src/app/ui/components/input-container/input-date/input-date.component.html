@@ -1,0 +1,8 @@
+<div [formGroup]="formGroup">
+  <custom-input-container [group]="formGroup" [messages]="formGroupMessages" [name]="name" [alwaysValid]="alwaysValid">
+    <ion-label>{{ placeholder }}</ion-label>
+    <ion-datetime
+      [formControlName]="name" [displayFormat]="displayFormat" (ionChange)="formatDate()"
+      mode="ios" doneText="Selecionar" cancelText="Cancelar"></ion-datetime>
+  </custom-input-container>
+</div>

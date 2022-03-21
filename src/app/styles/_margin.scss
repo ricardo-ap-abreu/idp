@@ -1,0 +1,20 @@
+@import './variables';
+
+@each $pxvalue, $px in $pxs {
+    .margin-#{$pxvalue} {
+        margin: $px + px;
+    }
+    .margin-left-#{$pxvalue} {
+        margin-left: $px + px;
+    }
+    .margin-right-#{$pxvalue} {
+        margin-right: $px + px;
+    }
+    .margin-top-#{$pxvalue} {
+        margin-top: $px + px;
+    }
+    .margin-bottom-#{$pxvalue} {
+        margin-bottom: $px + px;
+    } 
+    
+}

@@ -1,0 +1,16 @@
+ion-row {
+  padding: 5px 10px;
+
+  ion-col {
+    margin: auto;
+  }
+
+  ion-icon {
+    color: var(--ion-color-primary);
+  }
+
+  ion-icon:active {
+    opacity: .5;
+  }
+
+}

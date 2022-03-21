@@ -1,0 +1,8 @@
+<div [formGroup]="formGroup">
+  <custom-input-container [group]="formGroup" [messages]="formGroupMessages" [name]="name" [alwaysValid]="alwaysValid">
+    <ion-label>{{ placeholder }}</ion-label>
+    <ion-select [formControlName]="name" [value]="selected ? selected.id : ''" okText="Selecionar" cancelText="Cancelar" mode="ios">
+      <ion-select-option *ngFor="let item of items" [value]="item.id">{{item.value}}</ion-select-option>
+    </ion-select>
+  </custom-input-container>
+</div>

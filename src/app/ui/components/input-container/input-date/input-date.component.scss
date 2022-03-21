@@ -1,0 +1,19 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+@import '../../../../styles/font';
+
+ion-label {
+  font-weight: bold;
+}
+
+ion-thumbnail {
+  width: 20px;
+  height: 20px;
+
+  ion-icon {
+    font-size: 30px;
+  }
+}
+
+
+
